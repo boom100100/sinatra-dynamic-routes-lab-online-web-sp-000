@@ -21,7 +21,12 @@ class App < Sinatra::Base
 
   get '/:operation/:number1/:number2' do
     #params[:number1].to_i.public_send(params[:operation], params[:number2].to_i)
-    params[:number1].to_i params[:operation] params[:number2].to_i
+    if params[:operation] == "add"
+    elsif
+    elsif
+    elsif
+    else
+    end
     #params[:number2].to_i
     #3.public_send("+", 5) # => 8
 
