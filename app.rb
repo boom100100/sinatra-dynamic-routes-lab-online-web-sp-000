@@ -22,15 +22,15 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     #params[:number1].to_i.public_send(params[:operation], params[:number2].to_i)
     if params[:operation] == "add"
-      params[:number1].to_i + params[:number2].to_i
+      (params[:number1].to_i + params[:number2].to_i).to_s
     elsif params[:operation] == "subtract"
-      params[:number1].to_i - params[:number2].to_i
+      (params[:number1].to_i - params[:number2].to_i).to_s
     elsif params[:operation] == "multiply"
-      params[:number1].to_i * params[:number2].to_i
+      (params[:number1].to_i * params[:number2].to_i).to_s
     elsif params[:operation] == "divide"
-      params[:number1].to_i / params[:number2].to_i
+      (params[:number1].to_i / params[:number2].to_i).to_s
     elsif params[:operation] == "remainder"
-      params[:number1].to_i % params[:number2].to_i
+      (params[:number1].to_i % params[:number2].to_i).to_s
     else
       "The app can't do this."
     end
